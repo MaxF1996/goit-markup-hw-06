@@ -19,6 +19,8 @@
   --header-border-color: #ececec;
   --brand-main-color: #afb1b8;
   --footer-media-bg-color: rgba(255, 255, 255, 0.1);
+  --input-border-color: rgba(255, 255, 255, 0.3);
+  --placeholder-text-color: rgba(255, 255, 255, 0.6);
   --backdrop-bg-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -435,7 +437,8 @@ nav.flex-container {
   display: block;
   padding: 12px;
 
-  height: 44px;
+  font-size: 0;
+
   color: inherit;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -711,6 +714,101 @@ nav.flex-container {
 .footer-socials .social-link:focus {
   background-color: var(--accent-color);
 }
+
+/* Розсилка */
+
+.form-mailing {
+  margin-left: 23px;
+
+  color: var(--main-light-color);
+}
+
+.form-mailing fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form-mailing label {
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: var(--main-letter-spacing);
+  text-transform: uppercase;
+}
+
+.form-inputing {
+  display: flex;
+  margin-top: 20px;
+  column-gap: 12px;
+}
+
+.form-mailing input {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: var(--main-letter-spacing);
+
+  padding: 14px 15px;
+
+  outline: none;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+
+  width: 356px;
+
+  color: inherit;
+  background-color: transparent;
+}
+
+.form-mailing input:focus {
+  border: 1px solid var(--main-light-color);
+}
+
+.form-mailing input::placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.form-mailing button {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  padding: 10px 27px 10px 34px;
+
+  border-radius: 4px;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+
+  color: inherit;
+  background-color: var(--accent-color);
+  fill: currentColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+}
+
+.form-mailing button:hover,
+.form-mailing button:focus {
+  opacity: 0.8;
+}
+
+.form-mailing .icon-mailing {
+  width: 24px;
+  height: 24px;
+}
+
+/* Модальне вікно */
 
 .backdrop {
   position: fixed;
