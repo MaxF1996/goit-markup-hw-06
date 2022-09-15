@@ -535,7 +535,7 @@
         </form>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button data-modal-close></button>
         <form class="form-callback js-speaker-form">
@@ -543,21 +543,27 @@
             <legend>Залиште свої дані, ми вам передзвонимо</legend>
             <div class="callback-inputing">
               <label for="callback-name">Ім'я</label>
-              <input type="text" id="callback-name" name="client-name" required />
+              <input type="text" id="callback-name" name="client-name" placeholder=" " required />
               <svg class="icon-client-name" width="18" height="18">
                 <use href="./images/icons.svg#client-name"></use>
               </svg>
             </div>
             <div class="callback-inputing">
               <label for="callback-tel">Телефон</label>
-              <input type="tel" id="callback-tel" name="client-number" required />
+              <input type="tel" id="callback-tel" name="client-number" placeholder=" " required />
               <svg class="icon-client-call" width="18" height="18">
                 <use href="./images/icons.svg#client-call"></use>
               </svg>
             </div>
             <div class="callback-inputing">
               <label for="callback-email">Пошта</label>
-              <input type="email" id="callback-email" name="client-email" required />
+              <input
+                type="email"
+                id="callback-email"
+                name="client-email"
+                placeholder=" "
+                required
+              />
               <svg class="icon-client-mail" width="18" height="18">
                 <use href="./images/icons.svg#client-mail"></use>
               </svg>
@@ -580,16 +586,17 @@
                   </svg>
                   <svg class="icon-non-check">
                     <use href="./images/icons.svg#non-check"></use>
-                  </svg> </span
-                >Погоджуюся з розсилкою та приймаю
+                  </svg>
+                </span>
+                <span class="agreement-description">Погоджуюся з розсилкою та приймаю </span>
                 <a
                   class="acception-link"
                   href="/index.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Умови договору</a
-                ></label
-              >
+                  >Умови договору
+                </a>
+              </label>
             </div>
             <button class="callback-submit" type="submit">Відправити</button>
           </fieldset>
